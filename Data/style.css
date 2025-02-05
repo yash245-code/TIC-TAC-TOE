@@ -1,0 +1,190 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #FED053;
+    margin: 0;
+    padding: 0;
+}
+
+#Main {
+    margin: 2% auto;
+    max-width: 90vw;
+    background: white;
+    padding: 3vw;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.991);
+}
+
+/* Header */
+.Heading img {
+    background-color: #1e2328;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 3vw;
+    border: none;
+    border-radius: 1vw;
+}
+
+/* Players Section */
+.Players {
+    display: flex;
+    justify-content: center;
+    gap: 2vw;
+    margin-bottom: 6vw;
+    flex-wrap: wrap;
+}
+
+.Player {
+    background-color: #2a2e34;
+    border-radius: 2vw;
+    margin: 1vh;
+    padding: 1vw;
+    min-width: 120px;
+    flex: 1;
+    max-width: 200px;
+    justify-content: center;
+}
+
+.plyr {
+    width: 100%;
+    border: none;
+    border-top-left-radius: 1vw;
+    border-top-right-radius: 1vw;
+    padding: 0.5em;
+}
+
+.PlayerSymbol {
+    background-color: #f5b301;
+    border: none;
+    border-radius: 1vw;
+    font-size: 7vh;
+    font-weight: bold;
+    color: white;
+}
+
+/* Gameboard */
+.Gameboard {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 6vw;
+}
+
+.Board {
+    width: 32vw;
+    max-width: 400px;
+    display: grid;
+    grid-template-columns: 10vw 10vw 10vw;
+    grid-template-rows: 10vw 10vw 10vw;
+    gap: 1vw;
+    justify-content: center;
+}
+
+.BoardCell {
+    color: white;
+    aspect-ratio: 1;
+    font-size: 5vw;
+    text-align: center;
+    border: 2vh solid #3b3f46;
+    background: #3b3f46;
+    cursor: pointer;
+    transition: background 0.15s, transform 0.2s;
+    border-radius: 1.5vw;
+}
+
+.BoardCell:hover {
+    background: #d1d1d1;
+    color: #3b3f46;
+    transform: scale(1.05);
+}
+
+/* Reset Button */
+.GameResetButton {
+    margin-top: 20px;
+    padding: 12px 25px;
+    font-size: 1.2em;
+    cursor: pointer;
+    background: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+.GameResetButton:hover {
+    background: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Popup */
+.PopupHide {
+    display: none; /* Hide by default */
+}
+
+.PopupShow {
+    display: flex; /* Show when active */
+    position: fixed; /* Stay in place */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+    justify-content: center;
+    align-items: center;
+}
+
+/* Popup content */
+.PopupContent {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.PopupResetBtn {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background: #28a745;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.PopupResetBtn:hover {
+    background: #218838;
+}
+
+/* ====== RESPONSIVE DESIGN ====== */
+@media (max-width: 600px) {
+    #Main {
+        max-width: 95vw;
+        padding: 5vw;
+    }
+
+    .Players {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Player {
+        width: 80%;
+        max-width: 300px;
+    }
+
+    .Board {
+        width: 95vw;
+        grid-template-columns: repeat(3, 30vw);
+        grid-template-rows: repeat(3, 30vw);
+    }
+
+    .BoardCell {
+        font-size: 12vw;
+        border: 1vh solid #3b3f46;
+    }
+}
