@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIC-TAC-TOE</title>
+    <link rel="icon" href="Data/Images/pngwing.png">
+    <link rel="stylesheet" href="Data/style.css">
+</head>
+<body>
+    <div id="Main">
+        <!-- Create a presentable heading -->
+        <div class="Heading"><img src="Data/Images/TIC-TAC-TOE-2-5-2025.png" alt="img"></div>
+
+        <!-- Creates the players -->
+        <div class="Players">
+            <div class="Player">
+                <img class="plyr" src="Data/Images/Player1.png" alt="">
+                <div class="PlayerSymbol">X</div>
+            </div>
+            <div class="Player">
+                <img class="plyr" src="Data/Images/Player2.png" alt="">
+                <div class="PlayerSymbol">O</div>
+            </div>
+        </div>
+
+        <!-- Creates a 3x3 grid -->
+        <div class="Gameboard">
+            <div class="Board">
+                <button class="BoardCell" data-cell-index="1"></button>
+                <button class="BoardCell" data-cell-index="2"></button>
+                <button class="BoardCell" data-cell-index="3"></button>
+                <button class="BoardCell" data-cell-index="4"></button>
+                <button class="BoardCell" data-cell-index="5"></button>
+                <button class="BoardCell" data-cell-index="6"></button>
+                <button class="BoardCell" data-cell-index="7"></button>
+                <button class="BoardCell" data-cell-index="8"></button>
+                <button class="BoardCell" data-cell-index="9"></button>
+            </div>
+        </div>
+
+        <!-- Creates Reset Button -->
+        <button class="GameResetButton">Reset</button>
+
+        <!-- Popup for Game Result -->
+        <div class="PopupHide" id="popup">
+            <div class="PopupContent">
+                <p id="Message"></p>
+                <button class="PopupResetBtn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="Data/tic-tac-toe.js"></script>
+</body>
+</html>
